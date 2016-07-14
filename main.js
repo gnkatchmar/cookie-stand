@@ -1,9 +1,11 @@
+//objects
 var loc0 = {
   store: 'Pioneer Square',
   minCust: 17,
   maxCust: 88,
   avgSale: 5.2,
-  hourly: []
+  hourly: [],
+  total: 0
 };
 
 var loc1 = {
@@ -11,7 +13,8 @@ var loc1 = {
   minCust: 6,
   maxCust: 24,
   avgSale: 1.2,
-  hourly: []
+  hourly: [],
+  total: 0
 };
 
 var loc2 = {
@@ -19,7 +22,8 @@ var loc2 = {
   minCust: 11,
   maxCust: 38,
   avgSale: 1.9,
-  hourly: []
+  hourly: [],
+  total: 0
 };
 
 var loc3 = {
@@ -27,7 +31,8 @@ var loc3 = {
   minCust: 20,
   maxCust: 48,
   avgSale: 3.3,
-  hourly: []
+  hourly: [],
+  total: 0
 };
 
 var loc4 = {
@@ -35,13 +40,13 @@ var loc4 = {
   minCust: 3,
   maxCust: 24,
   avgSale: 2.6,
-  hourly: []
+  hourly: [],
+  total: 0
 };
 
 var locations = [loc0, loc1, loc2, loc3, loc4];
 
-
-
+//functions
 function hourlyEst() {
 
   for (var index = 0; index < locations.length; index++) {
@@ -49,37 +54,37 @@ function hourlyEst() {
   for (i = 0; i < 8; i++) {
     x = Math.round((Math.floor(Math.random() * (locations[index].maxCust - locations[index].minCust + 1)) + locations[index].minCust)*locations[index].avgSale);
     locations[index].hourly.push(x);
-    //console.log(locations[index].hourly);
-  }
+    locations[index].total += x;
+   }
     
   } 
 
 }
 
+
 function displayLists () {
 
   for (var index = 0; index < locations.length; index++) {
-    
+    document.getElementById("listBegin").innerHTML += "<h2>" + locations[index].store + "</h2>";
+      
     for (i = 0; i < 8; i++) {
-//      document.getElementById("tableStart").innerHTML += "<h2>" + locations[index].store + "</h2>";
-      console.log(locations[index].store);
+      tm = i + 10;
+      var dt = new Date();
+      dt.setHours(tm);
+      dt = dt.toLocaleString('en-US', { hour: 'numeric', hour12: true });
+      document.getElementById("listBegin").innerHTML += "<ul><li>"+dt+": " +locations[index].hourly[i]+" cookies</li>";
           
-  }
-    
+    }
+ 
+    document.getElementById("listBegin").innerHTML += "<ul><li>Total: " +locations[index].total+" cookies</li>";    
     
   }
 
 }
 
+
+//main program
 hourlyEst();
 displayLists();
 
 
-//
-//
-//var list = document.getElementById("students");
-//    var info = "<li>"+this.name;
-//    info += "<ul><li>"+this.email+"</li>";
-//    info += "<li>"+this.phone+"</li></ul></li>";
-//    list.innerHTML += info;
-//
