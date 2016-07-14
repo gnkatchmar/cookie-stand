@@ -65,19 +65,22 @@ function hourlyEst() {
 function displayLists () {
 
   for (var index = 0; index < locations.length; index++) {
-    document.getElementById("listBegin").innerHTML += "<h2>" + locations[index].store + "</h2>";
-      
+    document.getElementById("listBegin").innerHTML += "<h3>" + locations[index].store + "</h3>";
+    var list = document.getElementById("listBegin");
+    var info = "<table>";
+    
     for (i = 0; i < 8; i++) {
       tm = i + 10;
       var dt = new Date();
       dt.setHours(tm);
       dt = dt.toLocaleString('en-US', { hour: 'numeric', hour12: true });
-      document.getElementById("listBegin").innerHTML += "<ul><li>"+dt+": " +locations[index].hourly[i]+" cookies</li>";
-          
+      //document.getElementById("listBegin").innerHTML += "<ul><li>"+dt+": " +locations[index].hourly[i]+" cookies</li>";
+      info += "<tr><td>"+dt+"</td><td>" +locations[index].hourly[i]+" cookies</td></tr>";  
     }
  
-    document.getElementById("listBegin").innerHTML += "<ul><li>Total: " +locations[index].total+" cookies</li>";    
-    
+    //document.getElementById("listBegin").innerHTML += "<ul><li>Total: " +locations[index].total+" cookies</li>";    
+    info += "<tr><td>Total:</td><td>" +locations[index].total+" cookies</td></tr></table>";
+    list.innerHTML += info;   
   }
 
 }
@@ -87,4 +90,6 @@ function displayLists () {
 hourlyEst();
 displayLists();
 
-
+    
+    
+    
