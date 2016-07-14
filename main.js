@@ -79,7 +79,7 @@ function displayLists () {
     }
  
     //document.getElementById("listBegin").innerHTML += "<ul><li>Total: " +locations[index].total+" cookies</li>";    
-    info += "<tr><td>Total:</td><td>" +locations[index].total+" cookies</td></tr></table>";
+    info += "<tr><td><b>Total:</b></td><td><b>" +locations[index].total+" cookies</b></td></tr></table>";
     list.innerHTML += info;   
   }
 
