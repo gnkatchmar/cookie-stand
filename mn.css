@@ -1,6 +1,26 @@
+/* Base Styles -------------------- */
+
+* {
+  font-family: 'Nunito', sans-serif;
+}
+
+header {
+  text-align: center;
+}
+
+
+body {
+  color: #555555;
+  font: Helvetica, sans-serif;
+  padding: 0px 10px;
+}
+
+h1, h2, h3 {  
+  color: #FF717E;
+}
+
 table {
   border-collapse: collapse;
-/*  width: 40%;*/
   table-layout: fixed;
  }
 
@@ -8,4 +28,11 @@ table, th, td {
   border: 1px solid black;
   padding: 5px;
   width: 150px;
+}
+
+/* Exceptions -------------------- */
+
+.typo {
+  color: #C0BCB6;
+  font-weight: bold;
 }
