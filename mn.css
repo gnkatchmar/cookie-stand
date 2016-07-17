@@ -19,6 +19,10 @@ h1, h2, h3 {
   color: #FF717E;
 }
 
+figure {
+  margin: 0px;
+}
+
 table {
   border-collapse: collapse;
   table-layout: fixed;
@@ -30,9 +34,18 @@ table, th, td {
   width: 150px;
 }
 
+footer {
+  padding-top: 30px;
+  color:  #97C30A;
+  font-style: oblique;
+  font-size: 0.9rem;
+  
+}
+
 /* Exceptions -------------------- */
 
 .typo {
   color: #C0BCB6;
   font-weight: bold;
+  font-stretch: extra-expanded;
 }
