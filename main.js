@@ -24,21 +24,42 @@ var loc0 = {
     }
   },
   
-  displayLists: function () {
-    document.getElementById("listBegin").innerHTML += "<h3>" + this.store + "</h3>";
-    var list = document.getElementById("listBegin");
-    var info = "<table>";
+  generate_table: function () {
     
-    for (i = 0; i < 8; i++) {
+    document.write("<h3>" + this.store + "</h3>");
+    var table = document.createElement("table");
+    document.body.appendChild(table);
+
+    for(var i = 0; i < 8; i++) {
       tm = i + 10;
       var dt = new Date();
       dt.setHours(tm);
       dt = dt.toLocaleString('en-US', { hour: 'numeric', hour12: true });
-      info += "<tr><td>"+dt+"</td><td>" +this.hourlyCookies[i]+" cookies</td></tr>";  
-    } 
-    info += "<tr><td><b>Total:</b></td><td><b>" +this.total+" cookies</b></td></tr></table>";
-    list.innerHTML += info;    
-  }    
+      var row = document.createElement("tr");
+      var timeCell = document.createElement("td");
+      var salesCell = document.createElement("td");
+      var time = document.createTextNode(dt);
+      var sales = document.createTextNode(this.hourlyCookies[i]);
+      timeCell.appendChild(time);
+      salesCell.appendChild(sales);
+      row.appendChild(timeCell);
+      row.appendChild(salesCell);
+      table.appendChild(row);
+     }
+    
+    var row = document.createElement("tr");
+    var timeCell = document.createElement("td");
+    var salesCell = document.createElement("td");
+    var time = document.createTextNode("Total:");
+    var sales = document.createTextNode(this.total);
+    timeCell.appendChild(time);
+    salesCell.appendChild(sales);
+    row.appendChild(timeCell);
+    row.appendChild(salesCell);
+    table.appendChild(row);
+    document.write("<br>");
+    
+  }
     
 }
 
@@ -66,21 +87,42 @@ var loc1 = {
     }
   },
   
-  displayLists: function () {
-    document.getElementById("listBegin").innerHTML += "<h3>" + this.store + "</h3>";
-    var list = document.getElementById("listBegin");
-    var info = "<table>";
+  generate_table: function () {
     
-    for (i = 0; i < 8; i++) {
+    document.write("<h3>" + this.store + "</h3>");
+    var table = document.createElement("table");
+    document.body.appendChild(table);
+
+    for(var i = 0; i < 8; i++) {
       tm = i + 10;
       var dt = new Date();
       dt.setHours(tm);
       dt = dt.toLocaleString('en-US', { hour: 'numeric', hour12: true });
-      info += "<tr><td>"+dt+"</td><td>" +this.hourlyCookies[i]+" cookies</td></tr>";  
-    } 
-    info += "<tr><td><b>Total:</b></td><td><b>" +this.total+" cookies</b></td></tr></table>";
-    list.innerHTML += info;    
-  }    
+      var row = document.createElement("tr");
+      var timeCell = document.createElement("td");
+      var salesCell = document.createElement("td");
+      var time = document.createTextNode(dt);
+      var sales = document.createTextNode(this.hourlyCookies[i]);
+      timeCell.appendChild(time);
+      salesCell.appendChild(sales);
+      row.appendChild(timeCell);
+      row.appendChild(salesCell);
+      table.appendChild(row);
+     }
+    
+    var row = document.createElement("tr");
+    var timeCell = document.createElement("td");
+    var salesCell = document.createElement("td");
+    var time = document.createTextNode("Total:");
+    var sales = document.createTextNode(this.total);
+    timeCell.appendChild(time);
+    salesCell.appendChild(sales);
+    row.appendChild(timeCell);
+    row.appendChild(salesCell);
+    table.appendChild(row);
+    document.write("<br>");
+    
+  }
   
 }
 
@@ -108,21 +150,42 @@ var loc2 = {
     }
   },
   
-  displayLists: function () {
-    document.getElementById("listBegin").innerHTML += "<h3>" + this.store + "</h3>";
-    var list = document.getElementById("listBegin");
-    var info = "<table>";
+  generate_table: function () {
     
-    for (i = 0; i < 8; i++) {
+    document.write("<h3>" + this.store + "</h3>");
+    var table = document.createElement("table");
+    document.body.appendChild(table);
+
+    for(var i = 0; i < 8; i++) {
       tm = i + 10;
       var dt = new Date();
       dt.setHours(tm);
       dt = dt.toLocaleString('en-US', { hour: 'numeric', hour12: true });
-      info += "<tr><td>"+dt+"</td><td>" +this.hourlyCookies[i]+" cookies</td></tr>";  
-    } 
-    info += "<tr><td><b>Total:</b></td><td><b>" +this.total+" cookies</b></td></tr></table>";
-    list.innerHTML += info;    
-  }    
+      var row = document.createElement("tr");
+      var timeCell = document.createElement("td");
+      var salesCell = document.createElement("td");
+      var time = document.createTextNode(dt);
+      var sales = document.createTextNode(this.hourlyCookies[i]);
+      timeCell.appendChild(time);
+      salesCell.appendChild(sales);
+      row.appendChild(timeCell);
+      row.appendChild(salesCell);
+      table.appendChild(row);
+     }
+    
+    var row = document.createElement("tr");
+    var timeCell = document.createElement("td");
+    var salesCell = document.createElement("td");
+    var time = document.createTextNode("Total:");
+    var sales = document.createTextNode(this.total);
+    timeCell.appendChild(time);
+    salesCell.appendChild(sales);
+    row.appendChild(timeCell);
+    row.appendChild(salesCell);
+    table.appendChild(row);
+    document.write("<br>");
+    
+  }
   
 }
 
@@ -150,21 +213,42 @@ var loc3 = {
     }
   },
   
-  displayLists: function () {
-    document.getElementById("listBegin").innerHTML += "<h3>" + this.store + "</h3>";
-    var list = document.getElementById("listBegin");
-    var info = "<table>";
+  generate_table: function () {
     
-    for (i = 0; i < 8; i++) {
+    document.write("<h3>" + this.store + "</h3>");
+    var table = document.createElement("table");
+    document.body.appendChild(table);
+
+    for(var i = 0; i < 8; i++) {
       tm = i + 10;
       var dt = new Date();
       dt.setHours(tm);
       dt = dt.toLocaleString('en-US', { hour: 'numeric', hour12: true });
-      info += "<tr><td>"+dt+"</td><td>" +this.hourlyCookies[i]+" cookies</td></tr>";  
-    } 
-    info += "<tr><td><b>Total:</b></td><td><b>" +this.total+" cookies</b></td></tr></table>";
-    list.innerHTML += info;    
-  }    
+      var row = document.createElement("tr");
+      var timeCell = document.createElement("td");
+      var salesCell = document.createElement("td");
+      var time = document.createTextNode(dt);
+      var sales = document.createTextNode(this.hourlyCookies[i]);
+      timeCell.appendChild(time);
+      salesCell.appendChild(sales);
+      row.appendChild(timeCell);
+      row.appendChild(salesCell);
+      table.appendChild(row);
+     }
+    
+    var row = document.createElement("tr");
+    var timeCell = document.createElement("td");
+    var salesCell = document.createElement("td");
+    var time = document.createTextNode("Total:");
+    var sales = document.createTextNode(this.total);
+    timeCell.appendChild(time);
+    salesCell.appendChild(sales);
+    row.appendChild(timeCell);
+    row.appendChild(salesCell);
+    table.appendChild(row);
+    document.write("<br>");
+    
+  }
   
 }
 
@@ -192,21 +276,42 @@ var loc4 = {
     }
   },
   
-  displayLists: function () {
-    document.getElementById("listBegin").innerHTML += "<h3>" + this.store + "</h3>";
-    var list = document.getElementById("listBegin");
-    var info = "<table>";
+  generate_table: function () {
     
-    for (i = 0; i < 8; i++) {
+    document.write("<h3>" + this.store + "</h3>");
+    var table = document.createElement("table");
+    document.body.appendChild(table);
+
+    for(var i = 0; i < 8; i++) {
       tm = i + 10;
       var dt = new Date();
       dt.setHours(tm);
       dt = dt.toLocaleString('en-US', { hour: 'numeric', hour12: true });
-      info += "<tr><td>"+dt+"</td><td>" +this.hourlyCookies[i]+" cookies</td></tr>";  
-    } 
-    info += "<tr><td><b>Total:</b></td><td><b>" +this.total+" cookies</b></td></tr></table>";
-    list.innerHTML += info;    
-  }    
+      var row = document.createElement("tr");
+      var timeCell = document.createElement("td");
+      var salesCell = document.createElement("td");
+      var time = document.createTextNode(dt);
+      var sales = document.createTextNode(this.hourlyCookies[i]);
+      timeCell.appendChild(time);
+      salesCell.appendChild(sales);
+      row.appendChild(timeCell);
+      row.appendChild(salesCell);
+      table.appendChild(row);
+     }
+    
+    var row = document.createElement("tr");
+    var timeCell = document.createElement("td");
+    var salesCell = document.createElement("td");
+    var time = document.createTextNode("Total:");
+    var sales = document.createTextNode(this.total);
+    timeCell.appendChild(time);
+    salesCell.appendChild(sales);
+    row.appendChild(timeCell);
+    row.appendChild(salesCell);
+    table.appendChild(row);
+    document.write("<br>");
+    
+  }
   
 }
 
@@ -216,18 +321,13 @@ for (var index = 0; index < locations.length; index++) {
   var currentLocation = locations[index];
   currentLocation.rndCustsHour();
   currentLocation.cookiesHour();
-  currentLocation.displayLists();
+  //currentLocation.displayLists();
+  currentLocation.generate_table();
+  
 }
+  
 
-
-
-
-
-
-
-
-
-// Old, elegant code
+// Older concise code (first N6 submission)
 ////functions
 //function hourlyEst() {
 //
