@@ -356,7 +356,6 @@ for (var index = 0; index < locations.length; index++) {
   var currentLocation = locations[index];
   currentLocation.rndCustsHour();
   currentLocation.cookiesHour();
-  //currentLocation.displayLists();
   currentLocation.generate_table();
   
 }
