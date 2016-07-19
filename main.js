@@ -26,7 +26,10 @@ var loc0 = {
   
   generate_table: function () {
     
-    document.write("<h3>" + this.store + "</h3>");
+    var hdg = document.createElement("h3");
+    document.body.appendChild(hdg);
+    var hdgtext = document.createTextNode(this.store);
+    hdg.appendChild(hdgtext);
     var table = document.createElement("table");
     document.body.appendChild(table);
 
@@ -57,7 +60,11 @@ var loc0 = {
     row.appendChild(timeCell);
     row.appendChild(salesCell);
     table.appendChild(row);
-    document.write("<br>");
+    //need blank line to separate tables
+    var blk = document.createElement("p");
+    document.body.appendChild(blk);
+    var blktext = document.createTextNode(" ");
+    blk.appendChild(blktext);
     
   }
     
@@ -89,7 +96,10 @@ var loc1 = {
   
   generate_table: function () {
     
-    document.write("<h3>" + this.store + "</h3>");
+    var hdg = document.createElement("h3");
+    document.body.appendChild(hdg);
+    var hdgtext = document.createTextNode(this.store);
+    hdg.appendChild(hdgtext);
     var table = document.createElement("table");
     document.body.appendChild(table);
 
@@ -120,10 +130,14 @@ var loc1 = {
     row.appendChild(timeCell);
     row.appendChild(salesCell);
     table.appendChild(row);
-    document.write("<br>");
+    //need blank line to separate tables
+    var blk = document.createElement("p");
+    document.body.appendChild(blk);
+    var blktext = document.createTextNode(" ");
+    blk.appendChild(blktext);
     
   }
-  
+    
 }
 
 var loc2 = {
@@ -152,7 +166,10 @@ var loc2 = {
   
   generate_table: function () {
     
-    document.write("<h3>" + this.store + "</h3>");
+    var hdg = document.createElement("h3");
+    document.body.appendChild(hdg);
+    var hdgtext = document.createTextNode(this.store);
+    hdg.appendChild(hdgtext);
     var table = document.createElement("table");
     document.body.appendChild(table);
 
@@ -183,10 +200,14 @@ var loc2 = {
     row.appendChild(timeCell);
     row.appendChild(salesCell);
     table.appendChild(row);
-    document.write("<br>");
+    //need blank line to separate tables
+    var blk = document.createElement("p");
+    document.body.appendChild(blk);
+    var blktext = document.createTextNode(" ");
+    blk.appendChild(blktext);
     
   }
-  
+    
 }
 
 var loc3 = {
@@ -215,7 +236,10 @@ var loc3 = {
   
   generate_table: function () {
     
-    document.write("<h3>" + this.store + "</h3>");
+    var hdg = document.createElement("h3");
+    document.body.appendChild(hdg);
+    var hdgtext = document.createTextNode(this.store);
+    hdg.appendChild(hdgtext);
     var table = document.createElement("table");
     document.body.appendChild(table);
 
@@ -246,10 +270,14 @@ var loc3 = {
     row.appendChild(timeCell);
     row.appendChild(salesCell);
     table.appendChild(row);
-    document.write("<br>");
+    //need blank line to separate tables
+    var blk = document.createElement("p");
+    document.body.appendChild(blk);
+    var blktext = document.createTextNode(" ");
+    blk.appendChild(blktext);
     
   }
-  
+    
 }
 
 var loc4 = {
@@ -278,7 +306,10 @@ var loc4 = {
   
   generate_table: function () {
     
-    document.write("<h3>" + this.store + "</h3>");
+    var hdg = document.createElement("h3");
+    document.body.appendChild(hdg);
+    var hdgtext = document.createTextNode(this.store);
+    hdg.appendChild(hdgtext);
     var table = document.createElement("table");
     document.body.appendChild(table);
 
@@ -309,10 +340,14 @@ var loc4 = {
     row.appendChild(timeCell);
     row.appendChild(salesCell);
     table.appendChild(row);
-    document.write("<br>");
+    //need blank line to separate tables
+    var blk = document.createElement("p");
+    document.body.appendChild(blk);
+    var blktext = document.createTextNode(" ");
+    blk.appendChild(blktext);
     
   }
-  
+    
 }
 
 var locations = [loc0, loc1, loc2, loc3, loc4];
