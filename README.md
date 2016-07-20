@@ -1,24 +1,29 @@
 # cookie-stand
-Cookie Stand Assignment N7 (Week 3)
+Cookie Stand Assignment N8 (Week 4)
 
-Assignment for class
+Assignment for Class
 
-In lab today we'll be working on the first draft of our styleguide for Pat. Take a look at the example in the assets folder, and read through the styleguide section of the problem domain. You will find requirements for the styleguide, such as fonts and colors!
+In class, we learned how to refactor our cookie stand objects using a constructor and instances. Let's replace your object literals with a single constructor that when called with 'new', creates new instances. See pages 106-109 in your textbook for an example... and especially focus on 108 and 109.
+
+We will also be replacing the lists of data for each store, and implementing a table of data instead!
 
 Submit Your Work
 
 User Stories (MVP)
 
-As a user, I want a styleguide for my website, so that anyone working on the site (including me) in the future will have a great reference tool to work from.
-As a developer, I want to use proper HTML5 semantic markup to structure my page.
-As a developer, I want to add the store data to the page using DOM manipulation methods and properties.
+As a developer, I want to implement a constructor function, so that I can reuse code and eliminate much of the duplication in my JavaScript
+As a developer, I want to present the store data in a table format on the webpage, so each store's data is easier to represent and understand
+As a developer, I want to continue to evolve my styleguide (keep working on adding more details or finishing up what's not complete)
 
 Technical Requirements
 
-Styleguide meets basic requirements of the problem domain
 Working on a non-master branch for the day, with regular commit history
+Good use of a constructor function; style and syntax are correctly implemented
+Duplicate code has been removed and DRY principles are evident
+Table has been implemented and lists are no longer used to represent store data
+Styleguide is improving and becoming more specific (separate file from main page)
 
 User Stories (Stretch)
 
-As a developer, I want to provide more specificity in my styleguide so that it's much clearer as to what styles are represented in my site
-Get more specific, and have some fun! What other CSS properties can you specify??
+As a user, I want to be able to add a new store to my webpage, so that I have the ability to work independently of my developer
+This is a large stretch goal. There will be Forms and Events involved, which you are welcome to read ahead on and try to implement.
