@@ -1,3 +1,17 @@
+var rptContent = document.getElementById("content");
+
+function test (newLoc, newMin, newMax, newAvg) {
+  
+  console.log(newLoc);
+  console.log(newMin);
+  console.log(newMax);
+  console.log(newAvg);
+}
+
+function clrReport() {
+   document.getElementById("content").innerHTML = "";
+}
+
 function genReport () {
 
   var grandTotal = 0;
@@ -31,11 +45,11 @@ function genReport () {
     this.generate_table = function () {
 
       var hdg = document.createElement("h3");
-      document.body.appendChild(hdg);
+      rptContent.appendChild(hdg);
       var hdgtext = document.createTextNode(this.store);
       hdg.appendChild(hdgtext);
       var table = document.createElement("table");
-      document.body.appendChild(table);
+      rptContent.appendChild(table);
 
       for(var i = 0; i < 8; i++) {
         tm = i + 10;
@@ -74,6 +88,12 @@ function genReport () {
   ];
 
   //main program
+    
+  var tt = document.createElement("h2");
+  rptContent.appendChild(tt);
+  var tttext = document.createTextNode("Randomized Sales Report:");
+  tt.appendChild(tttext);
+  
   for (var index = 0; index < locations.length; index++) {
     var currentLocation = locations[index];
     currentLocation.rndCustsHour();
@@ -82,8 +102,8 @@ function genReport () {
   }
 
   var gt = document.createElement("h3");
-  document.body.appendChild(gt);
-  var gttext = document.createTextNode(grandTotal + " cookies sold in all stores");
+  rptContent.appendChild(gt);
+  var gttext = document.createTextNode(grandTotal.toLocaleString() + " cookies sold in all stores");
   gt.appendChild(gttext);
 
 }

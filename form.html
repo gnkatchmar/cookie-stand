@@ -10,13 +10,29 @@
     <header>
       <img src = "IMG/logo.png">
       <h1>Salmon Cookies</h1>
+<!--
       <nav>
         <button type ="button" onclick="genReport()">Generate Random Sales Report</button>
         <button type ="button" onclick="clrReport()">Clear Report(s)</button>
         <a href="form.html" class="button">Add Store</a>
       </nav>
+-->
     </header>
-    <section id="content">
+    <section>
+      <form id ="NewStore" onsubmit = "test(newLoc, newMin, newMax, newAvg)" action = "">
+        <fieldset>
+          <legend>New Store:</legend>
+          Location:<br>
+          <input type="text" name="newLoc"><br>
+          Min / Cust:<br>
+          <input type="text" name="newMin"><br>
+          Max / Cust:<br>
+          <input type="text" name="newMax"><br>
+          Avg Cookie / Sale (e.g. 3.3):<br>
+          <input type="text" name="newAvg"><br><br>
+          <input type="submit" value="Submit">
+        </fieldset>
+      </form>
     
     </section>
       <script type="text/javascript" src="main.js"></script>
