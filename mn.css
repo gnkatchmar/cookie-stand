@@ -48,29 +48,34 @@ button {
 
 a.button {
   appearance: button;
-  margin-top: 21px;
+  margin-top: 20px;
   background-color: #97C30A;
   border: none;
   color: white;
-  padding: 13px 32px;
+  padding: 15px 34px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  width: 300px;
+  width: 238px;
   vertical-align: top;
-  font-size: 90%;
+  font-size: 80%;
 }
 
-input[type=text] {
-  width: 100%;
+form {
+  width: 25%;
+  margin: 20px auto; 
+  border: 2px #1FBED6;
+}
+input[type=text], input[type=number] {
+/*  width: 100%;*/
   padding: 12px 20px;
   margin: 8px 8px;
-  box-sizing: border-box;
-  border: 2px #1FBED6;
-  border-radius: 4px;
+/*  box-sizing: border-box;*/
+/*  border: 2px #1FBED6;*/
+/*  border-radius: 4px;*/
 }
 
-input[type=button], input[type=submit], input[type=reset] {
+input[type=button], input[type=submit] {
   background-color: #4CAF50;
   border: none;
   color: white;
@@ -82,8 +87,9 @@ input[type=button], input[type=submit], input[type=reset] {
 
 form {
   width: 25%;
-  margin: 0 auto; 
+  margin: 20px auto; 
   border: 2px #1FBED6;
+  align-content: center;
 }
 
 table {
