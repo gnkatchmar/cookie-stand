@@ -111,17 +111,14 @@ function clrReport() {
 }
 
 function addStore (a, b, c, d) {
+  //N8 "big stretch"
   
-  var newLoc = [
-    new CookieStore(a, b, c, d),
-  ]
-  
-  Array.prototype.push.apply(locations, newLoc);
-  
-  //big console loop because quickly leaves page and clears console with next line
+  //big console loop because quickly leaves page and clears console
   for (i = 0; i < 1000; i++) {
     console.log(a.value, b.value, c.value, d.value);
   };
   
+  //tried a variety of approaches to add "new CookieStore(a, b, c, d)" to var locations = [] to no avail
+   
   window.location.href = 'index.html';
 }
