@@ -1,5 +1,6 @@
 //global variables
 var rptContent = document.getElementById("content");
+var formContent = document.querySelector("#addNew");
 var grandTotal = 0;
 var reportNum = 1;
 
@@ -37,7 +38,7 @@ var CookieStore = function(store, minCust, maxCust, avgSale) {
     var table = document.createElement("table");
     rptContent.appendChild(table);
 
-    for(var i = 0; i < 8; i++) {
+    for (var i = 0; i < 8; i++) {
       tm = i + 10;
       var dt = new Date();
       dt.setHours(tm);
@@ -74,12 +75,21 @@ var locations = [
 ];
 
 //functions
+function seeForm () {
+    formContent.style.visibility = "visible";
+}
+
+function addStore (newLoc, newMin, newMax, newAvg) {
+  x = new CookieStore(newLoc.value, parseInt(newMin.value), parseInt(newMax.value), parseFloat(newAvg.value));
+  locations.push(x);
+  formContent.style.visibility = "hidden";
+}
+
 function genReport () {
-  
-  var tt = document.createElement("h2");
-  rptContent.appendChild(tt);
-  var tttext = document.createTextNode("Randomized Sales Report " + reportNum + ":");
-  tt.appendChild(tttext);
+  var tableTitle = document.createElement("h3");
+  rptContent.appendChild(tableTitle);
+  var tableTitleText = document.createTextNode("Randomized Sales Report " + reportNum + ":");
+  tableTitle.appendChild(tableTitleText);
   reportNum += 1;
   
   for (var index = 0; index < locations.length; index++) {
@@ -95,38 +105,17 @@ function genReport () {
     currentLocation.generate_table();
   }
 
-  var gt = document.createElement("h3");
-  rptContent.appendChild(gt);
-  var gttext = document.createTextNode(grandTotal.toLocaleString() + " cookies sold in all stores for all reports run");
-  gt.appendChild(gttext);
+  var grandTotalHdg = document.createElement("h3");
+  rptContent.appendChild(grandTotalHdg);
+  var grandTotalHdgText = document.createTextNode(grandTotal.toLocaleString() + " cookies sold in all stores for all reports run");
+  grandTotalHdg.appendChild(grandTotalHdgText);
 
 }
 
 function clrReport() {
   document.getElementById("content").innerHTML = "";
   //why does this not rezero for additional report generation?
-  var grandTotal = 0;
+  grandTotal = 0;
   console.log(grandTotal);  //yes, it is 0
-  var reportNum = 1;
-}
-
-function addStore (a, b, c, d) {
-  //N8 "big stretch"
-  
-  //big console loop because quickly leaves page and clears console
-  for (i = 0; i < 1000; i++) {
-    console.log(a.value, b.value, c.value, d.value);
-  };
-  
-  //tried a variety of approaches to add "new CookieStore(a, b, c, d)" to var locations = [] to no avail
-  
-//  var form = document.getElementById('store')
-//  form.onsubmit = function (e) {
-//  e.preventDefault()
-//  var newStore = new Store(form.storeName.value, form.minCustomer.value, form.maxCustomer.value, form.avgCookie.value)
-//  locations.push(newStore)
-//  console.log(newStore)
-//  storeInfo(locations)
-   
-  window.location.href = 'index.html';
+  reportNum = 1;
 }

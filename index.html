@@ -1,9 +1,10 @@
+<!DOCTYPE html>
 <html>
   <head>
     <link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="mn.css">
     <title>
-      Salmon Cookies
+      Salmon Cookies-Main Page
     </title>
   </head>
   <body>
@@ -13,11 +14,26 @@
       <nav>
         <button type ="button" onclick="genReport()">Generate Random Sales Report</button>
         <button type ="button" onclick="clrReport()">Clear Report(s)</button>
-        <a href="form.html" class="button">Add Store</a>
+        <button type ="button" onclick="seeForm()">Add Store</button>
       </nav>
     </header>
-    <section id="content">
-    
+    <section id="content">    
+    </section>
+    <section id="addNew">
+      <form id ="NewStore" onsubmit = "addStore(newLoc, newMin, newMax, newAvg); return false" action="index.html">
+        <fieldset>
+          <legend>New Store:</legend>
+          Location:<br>
+          <input type="text" name="newLoc"><br>
+          Minimum Customers per Hour:<br>
+          <input type="number" name="newMin"><br>
+          Maximum Customers per Hour:<br>
+          <input type="number" name="newMax"><br>
+          Average Cookies per Customer (e.g. "3.3"):<br>
+          <input type="number" name="newAvg" step="0.1"<br><br>
+          <input type="submit" value="Submit">
+        </fieldset>
+      </form>
     </section>
       <script type="text/javascript" src="main.js"></script>
     </body>
