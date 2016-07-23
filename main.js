@@ -119,6 +119,14 @@ function addStore (a, b, c, d) {
   };
   
   //tried a variety of approaches to add "new CookieStore(a, b, c, d)" to var locations = [] to no avail
+  
+//  var form = document.getElementById('store')
+//  form.onsubmit = function (e) {
+//  e.preventDefault()
+//  var newStore = new Store(form.storeName.value, form.minCustomer.value, form.maxCustomer.value, form.avgCookie.value)
+//  locations.push(newStore)
+//  console.log(newStore)
+//  storeInfo(locations)
    
   window.location.href = 'index.html';
 }
