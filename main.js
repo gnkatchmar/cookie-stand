@@ -14,7 +14,7 @@ var CookieStore = function(store, minCust, maxCust, avgSale) {
   this.hourlyCookies = [];
   this.total = 0;
     
-  //methods
+  //object constructor methods
   this.rndCustsHour = function () {
      for (i = 0; i < 8; i++) {
       x = Math.floor(Math.random() * (this.maxCust - this.minCust + 1)) + this.minCust;
@@ -114,7 +114,6 @@ function genReport () {
 
 function clrReport() {
   document.getElementById("content").innerHTML = "";
-  //why does this not rezero for additional report generation?
   grandTotal = 0;
   console.log(grandTotal);  //yes, it is 0
   reportNum = 1;

@@ -46,23 +46,6 @@ button {
   vertical-align: top;
 }
 
-/*
-a.button {
-  appearance: button;
-  margin-top: 20px;
-  background-color: #97C30A;
-  border: none;
-  color: white;
-  padding: 15px 34px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  width: 238px;
-  vertical-align: top;
-  font-size: 80%;
-}
-*/
-
 form {
   width: 25%;
   margin: 20px auto; 
